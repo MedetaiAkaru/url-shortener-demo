@@ -3,7 +3,9 @@ Bundler.require
 
 ENV['SINATRA_ENV'] ||= "development"
 
-require 'dotenv'
-Dotenv.load
+unless ENV['SINATRA_ENV'] == 'production'
+    require 'dotenv'
+    Dotenv.load
+end
 
 require_all 'app'
