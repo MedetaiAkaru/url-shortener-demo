@@ -12,6 +12,10 @@ gem 'pg'
 gem 'shotgun'
 gem 'byebug'
 
+group :development do
+  gem 'dotenv'
+end
+
 group :test do
   gem 'launchy'
   gem 'rspec'

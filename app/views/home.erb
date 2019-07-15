@@ -27,7 +27,7 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <% @urls.each do |url|%>
-<br><a href="http://localhost:9393/<%=url.short%>">http://localhost:9393/<%=url.short%></a>
+<br><a href="<%=ENV['BASE_URL']%><%=url.short%>"><%=ENV['BASE_URL']%><%=url.short%></a>
 <br>
 <% end %>
 
